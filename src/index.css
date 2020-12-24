@@ -1,0 +1,11 @@
+#root,
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: url("https://wallpaperaccess.com/full/732216.jpg");
+  background-size: cover;
+}
