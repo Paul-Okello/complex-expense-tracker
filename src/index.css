@@ -6,6 +6,7 @@ html {
 }
 
 body {
-  background: url("https://wallpaperaccess.com/full/732216.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./assets/money.png");
   background-size: cover;
 }
