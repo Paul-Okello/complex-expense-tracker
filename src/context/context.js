@@ -8,7 +8,7 @@ export const Provider = ({ children }) => {
   const [transactions, dispatch] = useReducer(contextReducer, initialState);
 
   //Actions
-  const deleteTransactions = (id) =>
+  const deleteTransaction = (id) =>
     dispatch({
       type: "DELETE_TRANSACTION",
       payload: id,
@@ -20,11 +20,9 @@ export const Provider = ({ children }) => {
       payload: transaction,
     });
 
-  console.log(transactions);
-
   return (
     <ExpenseTarackerContext.Provider
-      value={{ deleteTransactions, addTransaction }}
+      value={{ deleteTransaction, addTransaction, transactions }}
     >
       {children}
     </ExpenseTarackerContext.Provider>
