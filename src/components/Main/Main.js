@@ -22,7 +22,7 @@ const Main = () => {
           Total Balance Ksh 300
         </Typography>
         <Typography
-          variant="subtitle1"
+          variant="subtitle2"
           style={{ lineHeight: "1.5em", marginTop: "20px" }}
         >
           {/* <InfoCard /> */}
