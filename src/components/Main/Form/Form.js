@@ -18,6 +18,7 @@ import {
 } from "../../../constants/categories";
 import formatDate from "../../../utils/formatDate";
 import { useSpeechContext } from "@speechly/react-client";
+import CustomizeSnackbar from "../../CustomizeSnackbar/CustomizeSnackbar";
 
 const initialState = {
   amount: "",
@@ -29,6 +30,7 @@ const initialState = {
 const Form = () => {
   const classes = useStyles();
   const [formData, setFormData] = useState(initialState);
+  const [open, setOpen] = useState(false);
 
   const { addTransaction } = useContext(ExpenseTarackerContext);
 
@@ -43,6 +45,7 @@ const Form = () => {
       amount: Number(formData.amount),
       id: uuidv4(),
     };
+    setOpen(true);
     addTransaction(transaction);
     setFormData(initialState);
   };
@@ -106,6 +109,7 @@ const Form = () => {
 
   return (
     <Grid container spacing={2}>
+      <CustomizeSnackbar open={open} setOpen={setOpen} />
       <Grid item xs={12}>
         <Typography
           align="center"
